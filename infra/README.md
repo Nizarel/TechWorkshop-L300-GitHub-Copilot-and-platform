@@ -230,5 +230,5 @@ The infrastructure uses cost-optimized SKUs for development:
 - [Azure Developer CLI Documentation](https://learn.microsoft.com/azure/developer/azure-developer-cli/)
 - [Azure Container Registry Documentation](https://learn.microsoft.com/azure/container-registry/)
 - [App Service Linux Containers](https://learn.microsoft.com/azure/app-service/configure-custom-container)
-- [Azure AI Foundry Documentation](https://learn.microsoft.com/azure/ai-foundry/)
+- [Azure AI Studio Documentation](https://learn.microsoft.com/azure/ai-studio/)
 - [Application Insights for .NET](https://learn.microsoft.com/azure/azure-monitor/app/asp-net-core)
