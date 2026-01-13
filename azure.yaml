@@ -1,0 +1,8 @@
+name: zavastorefrontapp
+metadata:
+  template: zavastorefrontapp
+services:
+  web:
+    project: ./src
+    language: csharp
+    host: containerapp
