@@ -148,3 +148,7 @@ desktop.ini
 # Azure Developer CLI
 .azure/
 *.env
+
+# Bicep compiled files
+infra/**/*.json
+!infra/main.parameters.json
