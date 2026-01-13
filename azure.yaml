@@ -1,0 +1,11 @@
+name: zavastorefrontapp
+metadata:
+  template: zavastorefrontapp
+services:
+  web:
+    project: ./src
+    language: csharp
+    host: appservice
+    docker:
+      path: ./Dockerfile
+      context: .
