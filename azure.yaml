@@ -5,4 +5,7 @@ services:
   web:
     project: ./src
     language: csharp
-    host: containerapp
+    host: appservice
+    docker:
+      path: ./Dockerfile
+      context: .

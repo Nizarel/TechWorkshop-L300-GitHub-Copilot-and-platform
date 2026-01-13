@@ -109,10 +109,6 @@ module roleAssignment 'modules/roleAssignment.bicep' = {
     principalId: appService.outputs.principalId
     containerRegistryName: containerRegistry.outputs.name
   }
-  dependsOn: [
-    containerRegistry
-    appService
-  ]
 }
 
 // Azure AI Hub (Microsoft Foundry)
