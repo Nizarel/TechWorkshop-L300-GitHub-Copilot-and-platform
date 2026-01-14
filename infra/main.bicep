@@ -1,11 +1,16 @@
 targetScope = 'subscription'
 
+@minLength(1)
+@maxLength(64)
+@description('Azure region for resource deployment')
+param azureLocation string = 'westus3'
+
 @description('Name of the environment (e.g., dev, prod)')
 @maxLength(10)
 param environmentName string = 'dev'
 
 @description('Primary location for all resources')
-param location string = 'westus3'
+param location string = azureLocation
 
 @description('Base name for the application')
 param appName string = 'zavastore'
