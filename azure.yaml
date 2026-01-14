@@ -7,6 +7,8 @@ metadata:
 infra:
   provider: bicep
   path: infra
+  parameters:
+    azureLocation: westus3
 
 services:
   web:
