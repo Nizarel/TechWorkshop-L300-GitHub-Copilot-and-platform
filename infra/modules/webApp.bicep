@@ -33,6 +33,7 @@ resource webApp 'Microsoft.Web/sites@2023-01-01' = {
     siteConfig: {
       linuxFxVersion: 'DOCKER|${acrLoginServer}/${dockerImageName}'
       alwaysOn: true
+      acrUseManagedIdentityCreds: true
       appSettings: [
         {
           name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE'
