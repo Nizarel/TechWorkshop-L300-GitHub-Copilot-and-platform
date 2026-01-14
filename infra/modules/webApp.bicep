@@ -29,7 +29,7 @@ resource webApp 'Microsoft.Web/sites@2023-01-01' = {
   }
   properties: {
     serverFarmId: appServicePlanId
-    httpsOnly: true
+    httpsOnly: false
     siteConfig: {
       linuxFxVersion: 'DOCKER|${acrLoginServer}/${dockerImageName}'
       alwaysOn: true
@@ -49,6 +49,14 @@ resource webApp 'Microsoft.Web/sites@2023-01-01' = {
         {
           name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
           value: appInsightsConnectionString
+        }
+        {
+          name: 'ASPNETCORE_ENVIRONMENT'
+          value: 'Production'
+        }
+        {
+          name: 'ASPNETCORE_URLS'
+          value: 'http://+:80'
         }
       ]
       ftpsState: 'Disabled'

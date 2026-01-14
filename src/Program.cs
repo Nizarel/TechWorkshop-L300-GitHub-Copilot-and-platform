@@ -29,7 +29,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// In containers, skip HTTPS redirect if not behind HTTPS proxy
+if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("HTTPS_REDIRECT")))
+{
+    app.UseHttpsRedirection();
+}
 app.UseStaticFiles();
 
 app.UseRouting();
